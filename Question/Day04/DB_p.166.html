@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>예약 정보</title>
+
+         <style>
+            ul {
+                list-style: none;
+            }
+            
+            li {
+                margin-bottom: 10px;
+            }
+            label{
+                display: inline-block;
+                width: 60px;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <h1>예약정보</h1>
+        <form action="./Q_p.166.php" method="post">
+            <ul>
+                <li>
+                    <label for="r_name">이 름</label>
+                    <input type="username" name="r_name" id="r_name">
+                </li>
+                <li>
+                    <label for="r_phone">전 화</label>
+                    <input type="number" name="r_phone" id="r_phone">
+                </li>
+                <li>
+                    <label for="r_email">이메일</label>
+                    <input type="email" name="r_email" id="r_email"><br>
+                </li>
+                <li>
+                    <input type="submit" value="예약하기">
+                </li>
+            </ul>
+        </form>
+        </fieldset>
+    </body>
+</html>
