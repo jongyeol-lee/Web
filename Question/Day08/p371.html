@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p371</title>
+
+    <style>    
+        /* 이미지 스타일링 */
+        .pic img {
+        width: 100%; /* 이미지가 .pic 에 가득차도록 */
+        height: auto; /* 이미지의 비율을 유지 */
+        }
+        @media(min-width: 769px) and (max-width: 1024px){
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .pic{
+                width: 50%;
+                box-sizing: border-box;
+            }
+
+            #kitten-3{
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+        }
+        @media(min-width: 1025px){
+            .container{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="pic" id="kitten-1">
+            <img src="../images/kitten-1.jpg" alt="아기 고양이 사진">
+        </div>
+        <div class="pic" id="kitten-2">
+            <img src="../images/kitten-2.jpg" alt="아기 고양이 사진">
+        </div>
+        <div class="pic" id="kitten-3">
+            <img src="../images/kitten-3.jpg" alt="아기 고양이 사진">
+        </div>
+    </div>
+    
+</body>
+</html>
