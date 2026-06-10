@@ -1,4 +1,13 @@
-const screens = document.querySelectorAll(".screen");
+const slider =
+document.querySelector(".slider");
+
+const screens =
+document.querySelectorAll(".screen");
+
+const totalScreens =
+screens.length;
+
+let currentIndex = 0;
 
 function showScreen(index){
     
@@ -14,21 +23,20 @@ function showScreen(index){
         .style.width = percent + "%";
 }
 
-
-
 // 2초 후 화면2 이동
 setTimeout(() => {
     currentIndex = 1;
     showScreen(currentIndex); 
 }, 2000);
 
-let currentIndex = 0;
-
 // 카카오 버튼 클릭시 화면3
 document.addEventListener("click",(e)=>{
 
     if(e.target.classList.contains("kakao-btn")){
-        showScreen(2);
+        
+        currentIndex = 2;
+
+        showScreen(currentIndex);
     }
 
 });
