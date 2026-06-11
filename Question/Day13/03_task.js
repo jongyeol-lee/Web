@@ -1,6 +1,6 @@
 function pv(){
     
-    var files=
+    const files=
     document.getElementById("inputFiles").files;
 
     const preview =
@@ -8,14 +8,11 @@ function pv(){
 
     for(let i = 0; i < files.length; i++){
 
-        preview.querySelectorAll("img")
-
-        let fr=
-        new FileReader();
+        const fr = new FileReader();
 
         fr.onload= function(){
 
-            console.log(files[i].name);
+            console.log("읽기 완료");
 
             const img=
             document.createElement('img');
