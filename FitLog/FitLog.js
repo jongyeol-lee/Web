@@ -9,8 +9,15 @@ function addEc(){
     const li=
     document.createElement("li");
 
-    li.textContent=
+    const text=
     input.value;
+
+    li.textContent= text;
+
+    if(text===""){
+        alert('운동을 추가해주세요');
+        return;
+    }
 
     list.appendChild(li);
 
