@@ -1,41 +1,51 @@
 // 운동 추가
-function addEc(){
-
-    const input=
+const exerciseInput=
     document.getElementById('exerciseInput');
 
-    const list=
+const exerciseList=
     document.getElementById('exerciseList');
 
+function addExercise(){
+
     const li=
-    document.createElement("li");
+        document.createElement("li");
 
-    const text = input.value;
+    const deleteBtn =
+    document.createElement("button");
 
-    li.textContent = text;
+    const text = exerciseInput.value;
 
-    if(text===""){
+    if(text.trim()===""){
         alert('운동을 추가해주세요');
         return;
     }
 
-    list.appendChild(li);
+    deleteBtn.onclick = function(){
+        li.remove();
+    }
 
-    input.value= "";
+    li.textContent = text;
+
+    deleteBtn.textContent = "삭제";
+    li.appendChild(deleteBtn);
+
+    exerciseList.appendChild(li);
+
+    exerciseInput.value= "";
 
 }
 
 // 운동 게시판
-function record(){
-
-    const textarea =
+const recordInput =
     document.getElementById("recordInput");
 
-    const postList =
+const postList =
     document.getElementById("postList");
 
+function record(){
+
     // textarea 내용 읽기
-    const text= textarea.value;
+    const text= recordInput.value;
 
     if(text.trim()===""){
         alert('기록을 입력해주세요');
@@ -49,5 +59,5 @@ function record(){
 
     postList.appendChild(post);
 
-    textarea.value= "";
+    recordInput.value= "";
 }

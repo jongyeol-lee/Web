@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLog</title>
+
+    <link rel="stylesheet" href="./css/common.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>FitLog</h1>
+
+        <div>
+        <input type="text" placeholder="운동입력 (예: 스쿼트)" id="exerciseInput">
+        <button onclick="addExercise()" id="addBtn">운동 추가</button>
+        </div>
+
+        <h2>운동 목록</h2>
+        <ul id="exerciseList"></ul>
+
+        <div id="postSection">
+            <h2>운동 게시판</h2>
+
+            <textarea id="recordInput" cols="50" rows="5"></textarea>
+            <button onclick="record()">기록 등록</button>
+
+            <div id="postList"></div>
+        </div>
+    </div>
+
+    <script src="./js/FitLog.js"></script>
+</body>
+</html>
