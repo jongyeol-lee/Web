@@ -1,3 +1,4 @@
+// 운동 추가
 function addEc(){
 
     const input=
@@ -9,10 +10,9 @@ function addEc(){
     const li=
     document.createElement("li");
 
-    const text=
-    input.value;
+    const text = input.value;
 
-    li.textContent= text;
+    li.textContent = text;
 
     if(text===""){
         alert('운동을 추가해주세요');
@@ -23,4 +23,31 @@ function addEc(){
 
     input.value= "";
 
+}
+
+// 운동 게시판
+function record(){
+
+    const textarea =
+    document.getElementById("recordInput");
+
+    const postList =
+    document.getElementById("postList");
+
+    // textarea 내용 읽기
+    const text= textarea.value;
+
+    if(text.trim()===""){
+        alert('기록을 입력해주세요');
+        return;
+    }
+
+    const post = document.createElement("div");
+
+    // post에 내용 읽기
+    post.textContent = text;
+
+    postList.appendChild(post);
+
+    textarea.value= "";
 }
